@@ -32,9 +32,13 @@ Once two people have set their times, the bot works out the overlap:
 
 ## Where this stands right now
 
-The bot works. The distribution was the problem, not the code.
+The bot works. Distribution was the problem, not the code.
 
-To use it today you have to download the source, get your own Discord bot token, and run it yourself — which is a big ask for a Discord server owner who isn't a developer. That's the main thing I got wrong, and it's what I'm fixing. See [docs/WHAT_WENT_WRONG.md](docs/WHAT_WENT_WRONG.md) for the full breakdown and [docs/ROADMAP.md](docs/ROADMAP.md) for what's next.
+The single biggest cause turned out to be embarrassing: **every product on my store was set to Hidden.** Nobody who clicked through from my videos could see anything to get. That's now fixed, along with cutting four confusing overlapping products down to one free one.
+
+What's still true is that using the bot means downloading the source and running it yourself, which is a big ask for a server owner who isn't a developer. Getting it hosted so it's one click to add is the next job.
+
+Full breakdown in [docs/WHAT_WENT_WRONG.md](docs/WHAT_WENT_WRONG.md); what's next in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Docs
 

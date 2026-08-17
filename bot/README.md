@@ -10,12 +10,16 @@ A Discord bot that collects everyone's available times, converts across timezone
 - `/clear_my_data` — clear your own saved data
 - `/help` — in-Discord help
 
-## Setup (running it yourself)
+## How the matching works
+
+Each person's local hours are converted to UTC using their region's offset, then chopped into 15-minute blocks. The bot counts how many people are free in each block, merges neighboring blocks that have the same people, keeps any run of at least 30 minutes, and sorts by headcount. Results are converted back into each person's own local time before being shown.
+
+## Setup
 
 1. **Create a Discord Application**
    - Go to https://discord.com/developers/applications
    - Click **New Application**, give it a name
-   - Go to the **Bot** tab, click **Reset Token** (or **Copy** if one exists) to get your bot token — keep this secret
+   - Go to the **Bot** tab and copy the token — keep this secret, it's the bot's password
 
 2. **Install the dependencies**
    ```bash
@@ -23,15 +27,17 @@ A Discord bot that collects everyone's available times, converts across timezone
    ```
 
 3. **Set your bot token**
-   - On Windows (PowerShell):
+   - Windows (PowerShell):
      ```powershell
      setx DISCORD_TOKEN "your-token-here"
      ```
      Then close and reopen PowerShell.
-   - On Mac/Linux:
+   - Mac/Linux:
      ```bash
      export DISCORD_TOKEN="your-token-here"
      ```
+
+   See `.env.example` for the full list of settings.
 
 4. **Run the bot**
    ```bash
@@ -39,9 +45,19 @@ A Discord bot that collects everyone's available times, converts across timezone
    ```
 
 5. **Invite the bot to your server**
-   - Back in the Discord Developer Portal, go to **OAuth2 → URL Generator**
-   - Under **Scopes**, check `bot` (and `applications.commands` so slash commands show up)
-   - Under **Bot Permissions**, check at least: Send Messages, Embed Links, Use Slash Commands
-   - Copy the generated URL, open it in your browser, and pick your server
+   - In the Developer Portal, go to **OAuth2 → URL Generator**
+   - Scopes: check `bot` and `applications.commands`
+   - Bot Permissions: Send Messages, Embed Links
+   - Open the generated URL and pick your server
 
-Keep the process running (locally, or on a host like Railway/Render) for the bot to stay online.
+The bot only runs while the process is running. Close the terminal and it goes offline.
+
+## Known limitations
+
+These are real and worth knowing before you rely on it:
+
+- **No daylight saving handling.** Regions are mapped to fixed UTC offsets in `config.py`, so for roughly half the year the times are off by an hour for anywhere that observes DST. Fixing this properly means using real timezone names (`zoneinfo`) instead of fixed numbers.
+- **Nothing is saved to disk.** All availability lives in memory, so restarting the bot wipes every server's data and everyone has to re-enter their times.
+- **Regions, not timezones.** You pick from ten broad regions rather than your actual timezone, so anyone whose country doesn't match the offset picked for their region gets the wrong answer.
+- **One schedule per server, no dates.** Availability is a daily pattern with no concept of "Tuesday" or a specific date, and there's only one shared schedule per server.
+- **No permission checks.** Any member can run any command.

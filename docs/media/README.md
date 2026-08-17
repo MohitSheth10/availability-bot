@@ -2,8 +2,7 @@
 
 The marketing assets from the original Bot Drop launch.
 
-- `Availability Bot Video 1.mp4` — the "problem" video (why coordinating across timezones is painful)
-- `Availability Bot Video 2.mp4` — the product demo, showing the bot working end to end
+Both demo videos live on YouTube rather than in this repo: https://www.youtube.com/@Bot-Drop/shorts
 - `Bot Drop Banner.png` / `Bot Drop Pfp.png` — the branding I made for the Whop storefront and YouTube channel
 - `Setup Guide.pdf` — the setup instructions that shipped with the paid download
 

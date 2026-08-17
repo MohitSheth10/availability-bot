@@ -1,0 +1,1 @@
+Placeholder for the "Add to Discord" landing page (like the one Invite Tracker bot has). See the main README for status — this depends on deciding whether the bot will run live 24/7 or stay a self-hosted download.

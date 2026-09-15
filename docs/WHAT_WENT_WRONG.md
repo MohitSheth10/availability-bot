@@ -1,7 +1,5 @@
 # What Went Wrong (and What I Learned)
 
-*(Draft — rewrite the wording in your own voice before this goes public. The substance is right; the phrasing should sound like you.)*
-
 The bot worked. The setup guide was clear. The videos were made and posted. It sold zero copies.
 
 For a long time I assumed that meant nobody wanted it. When I finally went back through the Whop dashboard properly, I found something much dumber.

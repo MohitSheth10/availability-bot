@@ -34,8 +34,6 @@ Once two people have set their times, the bot works out the overlap:
 
 The bot works. Distribution was the problem, not the code.
 
-The single biggest cause turned out to be embarrassing: **every product on my store was set to Hidden.** Nobody who clicked through from my videos could see anything to get. That's now fixed, along with cutting four confusing overlapping products down to one free one.
-
 What's still true is that using the bot means downloading the source and running it yourself, which is a big ask for a server owner who isn't a developer. Getting it hosted so it's one click to add is the next job.
 
 Full breakdown in [docs/WHAT_WENT_WRONG.md](docs/WHAT_WENT_WRONG.md); what's next in [docs/ROADMAP.md](docs/ROADMAP.md).

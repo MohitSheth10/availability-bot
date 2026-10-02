@@ -1,4 +1,4 @@
-# Scheduling Bott
+# Scheduling Bot
 
 A Discord bot that solves a simple, annoying problem: everyone in a friend group is free at *different* times, so even though there's usually some overlap, nobody finds it and people end up not playing together. This bot collects everyone's free hours (in their own timezone), does the math, and tells the group when the most people are actually free.
 

@@ -1,4 +1,4 @@
-# Bot Drop — Availability Bot (source code)
+ # Scheduling Bot (source code)
 
 A Discord bot that collects everyone's available times, converts across timezones, and finds the best overlapping slot for the group.
 

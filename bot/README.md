@@ -1,6 +1,6 @@
- # Scheduling Bot (source code)
+ # Quorum (source code)
 
-A Discord bot that collects everyone's available times, converts across timezones, and finds the best overlapping slot for the group.
+A Discord bot that collects every member's available times, converts them across timezones, counts how many people are free in each slot, and surfaces the single window where attendance is maximized — then notifies everyone individually in their own local time.
 
 ## Commands
 

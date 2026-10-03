@@ -1,6 +1,6 @@
-# Scheduling Bot
+# Quorum
 
-A Discord bot that solves a simple, annoying problem: everyone in a friend group is free at *different* times, so even though there's usually some overlap, nobody finds it and people end up not playing together. This bot collects everyone's free hours (in their own timezone), does the math, and tells the group when the most people are actually free.
+A Discord bot that engineers a group's scattered availability into a single, optimal meeting window. Quorum collects each member's free hours in their own timezone, normalizes everything to a shared time reference, scans for overlap in 15-minute blocks, tallies how many members are free in each one, and surfaces the window with maximum attendance — then notifies every member individually, with the result converted back into their own local time.
 
 I built this the summer before 10th grade, taught myself how to package and sell it, and listed it on [Whop](https://whop.com/botdrop) with demo videos on [YouTube](https://www.youtube.com/@Bot-Drop/shorts).
 
